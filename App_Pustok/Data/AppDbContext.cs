@@ -1,12 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using App_Pustok.Models;
+using Microsoft.EntityFrameworkCore;
 using PustokMvcApp.Models;
 using System.Reflection.Emit;
 
-namespace PustokMvcApp.Data
+namespace App_Pustok.Data
 {
     public class AppDbContext : DbContext
     {
         public DbSet<Book> Books { get; set; }
+        public DbSet<Setting> Setting { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<BookTag> BookTags { get; set; }
         public DbSet<Tag> Tags { get; set; }
@@ -19,5 +21,6 @@ namespace PustokMvcApp.Data
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
             base.OnModelCreating(modelBuilder);
         }
+        //hefukfhekf
     }
 }
