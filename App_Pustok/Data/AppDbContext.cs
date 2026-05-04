@@ -21,6 +21,6 @@ namespace App_Pustok.Data
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
             base.OnModelCreating(modelBuilder);
         }
-        
+        //db context 
     }
 }
